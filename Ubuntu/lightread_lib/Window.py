@@ -116,8 +116,3 @@ class Window(Gtk.ApplicationWindow):
     def on_mnu_close_activate(self, widget, data=None):
         """Signal handler for closing the LightreadWindow."""
         self.destroy()
-
-    def on_destroy(self, widget, data=None):
-        """Called when the LightreadWindow is closed."""
-        # Clean up code for saving application state should be added here.
-        #Gtk.main_quit()

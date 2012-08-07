@@ -165,16 +165,6 @@ class LightreadWindow(Window):
         self.webview.connect('title-changed', title_changed)
         self.webview.connect('navigation-requested', _navigation_requested_cb)
 
-        #self.add.connect ("activate", menuexternal, None)
-        #self.refresh.connect ("activate", menuexternal, None)
-        #self.star.connect ("activate", menuexternal, None)
-        #self.read.connect ("activate", menuexternal, None)
-        #self.logout.connect ("activate", menuexternal, None)
-        #self.next_article.connect ("activate", menuexternal, None)
-        #self.prev_article.connect ("activate", menuexternal, None)
-        #self.filter_all.connect ("activate", menuexternal, None)
-        #self.filter_unread.connect ("activate", menuexternal, None)
-        #self.filter_starred.connect ("activate", menuexternal, None)
         try:
             updatenews.connect ("item-activated", reload_feeds, None)
         except UnboundLocalError:
