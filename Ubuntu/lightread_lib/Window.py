@@ -39,7 +39,7 @@ from . helpers import get_builder, show_uri, get_help_uri
 
 # This class is meant to be subclassed by LightreadWindow.  It provides
 # common functions and some boilerplate.
-class Window(Gtk.Window):
+class Window(Gtk.ApplicationWindow):
     __gtype_name__ = "Window"
 
     # To construct a new instance of this method, the following notable 
@@ -52,7 +52,7 @@ class Window(Gtk.Window):
     # For this reason, it's recommended you leave __init__ empty and put
     # your initialization code in finish_initializing
     
-    def __new__(cls):
+    def __new__(cls, app):
         """Special static method that's automatically called by Python when 
         constructing a new instance of this class.
         
@@ -60,16 +60,18 @@ class Window(Gtk.Window):
         """
         builder = get_builder('LightreadWindow')
         new_object = builder.get_object("lightread_window")
-        new_object.finish_initializing(builder)
+        new_object.finish_initializing(builder, app)
         return new_object
 
-    def finish_initializing(self, builder):
+    def finish_initializing(self, builder, app):
         """Called while initializing this instance in __new__
 
         finish_initializing should be called after parsing the UI definition
         and creating a LightreadWindow object with it in order to finish
         initializing the start of the new LightreadWindow instance.
         """
+        Gtk.Window.__init__(self, title="lightread", application=app)
+
         # Get a reference to the builder and set up the signals.
         self.builder = builder
         self.ui = builder.get_ui(self, True)
@@ -118,5 +120,4 @@ class Window(Gtk.Window):
     def on_destroy(self, widget, data=None):
         """Called when the LightreadWindow is closed."""
         # Clean up code for saving application state should be added here.
-        Gtk.main_quit()
-
+        #Gtk.main_quit()

@@ -55,9 +55,9 @@ sharingsupport = os.path.isfile("/usr/bin/gwibber-poster")
 class LightreadWindow(Window):
     __gtype_name__ = "LightreadWindow"
     
-    def finish_initializing(self, builder): # pylint: disable=E1002
+    def finish_initializing(self, builder, app): # pylint: disable=E1002
         """Set up the main window"""
-        super(LightreadWindow, self).finish_initializing(builder)
+        super(LightreadWindow, self).finish_initializing(builder, app)
 
         self.AboutDialog = AboutLightreadDialog
         self.scroller = self.builder.get_object("scroller")
@@ -140,7 +140,7 @@ class LightreadWindow(Window):
                             self.set_title(title[1] + " - Lightread")
                             
                         launcher.set_property("count", int(title[1]))
-                    except UnboundLocalError:
+                    except Exception:
                         pass
                     
 
@@ -165,16 +165,16 @@ class LightreadWindow(Window):
         self.webview.connect('title-changed', title_changed)
         self.webview.connect('navigation-requested', _navigation_requested_cb)
 
-        self.add.connect ("activate", menuexternal, None)
-        self.refresh.connect ("activate", menuexternal, None)
-        self.star.connect ("activate", menuexternal, None)
-        self.read.connect ("activate", menuexternal, None)
-        self.logout.connect ("activate", menuexternal, None)
-        self.next_article.connect ("activate", menuexternal, None)
-        self.prev_article.connect ("activate", menuexternal, None)
-        self.filter_all.connect ("activate", menuexternal, None)
-        self.filter_unread.connect ("activate", menuexternal, None)
-        self.filter_starred.connect ("activate", menuexternal, None)
+        #self.add.connect ("activate", menuexternal, None)
+        #self.refresh.connect ("activate", menuexternal, None)
+        #self.star.connect ("activate", menuexternal, None)
+        #self.read.connect ("activate", menuexternal, None)
+        #self.logout.connect ("activate", menuexternal, None)
+        #self.next_article.connect ("activate", menuexternal, None)
+        #self.prev_article.connect ("activate", menuexternal, None)
+        #self.filter_all.connect ("activate", menuexternal, None)
+        #self.filter_unread.connect ("activate", menuexternal, None)
+        #self.filter_starred.connect ("activate", menuexternal, None)
         try:
             updatenews.connect ("item-activated", reload_feeds, None)
         except UnboundLocalError:
