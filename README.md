@@ -1,6 +1,6 @@
-LightRead
+GnomeRead
 =========
 
-The best RSS reader on Ubuntu
+The best RSS reader for Gnome
 
-Bugtracking is made on Launchpad for now: https://bugs.launchpad.net/lightread
+Forked from LightRead project (https://github.com/stayradiated/lightread)
