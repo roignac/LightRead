@@ -3,6 +3,7 @@
 # Copyright (C) 2012 Caffeinated Code <caffeinatedco.de>
 # Copyright (C) 2012 George Czabania
 # Copyright (C) 2012 Jono Cooper
+# Copyright (C) 2012 Vadim Rutkovsky
 # Copyright (c) The Regents of the University of California.
 # All rights reserved.
 #

@@ -14,7 +14,8 @@ Copyright: (C) 2012 Caffeinated Code <caffeinatedco.de>
 Copyright: (C) 2012 Caffeinated Code &lt;caffeinatedco.de&gt;
 Copyright: (C) 2012 George Czabania
 Copyright: (C) 2012 Jono Cooper
-Copyright: (C) 2012 Jono Cooper</property>
+Copyright: (C) 2012 Jono Cooper
+Copyright: (C) 2012 Vadim Rutkovsky</property>
 Copyright: (C){a[c]=b.bind(a[c],a)});return a};b.memoize=function(a,c){var d={};c||(c=b.identity);return function(){var e=c.apply(this,arguments);return b.has(d,e)?d[e]:d[e]=a.apply(this,arguments)}};b.delay=function(a,b){var d=i.call(arguments,2);return setTimeout(function(){return a.apply(null,d)},b)};b.defer=function(a){return b.delay.apply(b,[a,1].concat(i.call(arguments,1)))};b.throttle=function(a,c){var d,e,f,g,h,i,j=b.debounce(function(){h=
 Copyright: (C) Alexandru Marasteanu <alexaholic [at) gmail (dot] com>
 Copyright: (C)?c||a:a[c]).apply(a,d)})};b.pluck=
