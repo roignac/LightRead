@@ -39,7 +39,7 @@ from gi.repository import GObject, Gtk # pylint: disable=E0611
 import inspect
 import functools
 import logging
-logger = logging.getLogger('lightread_lib')
+logger = logging.getLogger('gnomeread_lib')
 
 from xml.etree.cElementTree import ElementTree
 

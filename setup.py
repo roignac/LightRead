@@ -41,7 +41,7 @@ import sys
 try:
     import DistUtilsExtra.auto
 except ImportError:
-    print >> sys.stderr, 'To build lightread you need https://launchpad.net/python-distutils-extra'
+    print >> sys.stderr, 'To build gnomeread you need https://launchpad.net/python-distutils-extra'
     sys.exit(1)
 assert DistUtilsExtra.auto.__version__ >= '2.18', 'needs DistUtilsExtra.auto >= 2.18'
 
@@ -49,7 +49,7 @@ def update_config(values = {}):
 
     oldvalues = {}
     try:
-        fin = file('lightread_lib/lightreadconfig.py', 'r')
+        fin = file('gnomeread_lib/gnomereadconfig.py', 'r')
         fout = file(fin.name + '.new', 'w')
 
         for line in fin:
@@ -64,14 +64,14 @@ def update_config(values = {}):
         fin.close()
         os.rename(fout.name, fin.name)
     except (OSError, IOError), e:
-        print ("ERROR: Can't find lightread_lib/lightreadconfig.py")
+        print ("ERROR: Can't find gnomeread_lib/gnomereadconfig.py")
         sys.exit(1)
     return oldvalues
 
 
 class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
     def run(self):
-        values = {'__lightread_data_directory__': "'%s'" % (self.prefix + '/share/lightread/'),
+        values = {'__gnomeread_data_directory__': "'%s'" % (self.prefix + '/share/gnomeread/'),
                   '__version__': "'%s'" % self.distribution.get_version()}
         previous_values = update_config(values)
         DistUtilsExtra.auto.install_auto.run(self)
@@ -83,15 +83,15 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 ##################################################################################
 
 DistUtilsExtra.auto.setup(
-    name='lightread',
+    name='gnomeread',
     version='1.0.20',
     license='BSD',
     author='George Czabania',
     author_email='george@czabania.com',
     description='A lightweight news reader.',
     #long_description='Here a longer description',
-    url='https://launchpad.net/lightread',
+    url='https://launchpad.net/gnomeread',
     cmdclass={'install': InstallAndUpdateDataDirectory},
-    data_files=[('share/icons/hicolor/128x128/apps', ['data/media/lightread.png'])]
+    data_files=[('share/icons/hicolor/128x128/apps', ['data/media/gnomeread.png'])]
     )
 

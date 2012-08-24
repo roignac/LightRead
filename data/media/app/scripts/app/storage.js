@@ -132,7 +132,7 @@ window.storage = {
 		})
 	},
 	init: function() {
-		db = openDatabase('lightread', '1.0', 'feeds and item storage', 5 * 1024 * 1024)
+		db = openDatabase('gnomeread', '1.0', 'feeds and item storage', 5 * 1024 * 1024)
 		db.transaction(function(tx) {
 			tx.executeSql('CREATE TABLE IF NOT EXISTS feeds (key text, value text)')
 			tx.executeSql('CREATE TABLE IF NOT EXISTS items (key text, value text)')

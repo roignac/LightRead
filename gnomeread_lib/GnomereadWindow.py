@@ -34,7 +34,7 @@
 
 import gettext
 from gettext import gettext as _
-gettext.textdomain('lightread')
+gettext.textdomain('gnomeread')
 
 import subprocess, os
 from gi.repository import Gtk, Gdk, WebKit, Notify # pylint: disable=E0611
@@ -43,24 +43,24 @@ try:
 except ImportError:
     pass
 import logging
-logger = logging.getLogger('lightread')
+logger = logging.getLogger('gnomeread')
 
-from lightread_lib.Window import Window
-from lightread_lib.helpers import get_media_file
-from lightread_lib.AboutLightreadDialog import AboutLightreadDialog
+from gnomeread_lib.Window import Window
+from gnomeread_lib.helpers import get_media_file
+from gnomeread_lib.AboutGnomereadDialog import AboutGnomereadDialog
 
 # Check for sharingsupport - make sure that gwibber-poster is in PATH
 sharingsupport = os.path.isfile("/usr/bin/gwibber-poster")
 
-# See lightread_lib.Window.py for more details about how this class works
-class LightreadWindow(Window):
-    __gtype_name__ = "LightreadWindow"
+# See gnomeread_lib.Window.py for more details about how this class works
+class GnomereadWindow(Window):
+    __gtype_name__ = "GnomereadWindow"
 
     def finish_initializing(self, builder): # pylint: disable=E1002
         """Set up the main window"""
-        super(LightreadWindow, self).finish_initializing(builder)
+        super(GnomereadWindow, self).finish_initializing(builder)
 
-        self.AboutDialog = AboutLightreadDialog
+        self.AboutDialog = AboutGnomereadDialog
         self.scroller = self.builder.get_object("scroller")
 
         self.webview = WebKit.WebView()
@@ -87,11 +87,11 @@ class LightreadWindow(Window):
 
 
         # Unity Support
-        Notify.init('Lightread')
-        self.notification = Notify.Notification.new('Lightread', '', 'lightread')
+        Notify.init('Gnomeread')
+        self.notification = Notify.Notification.new('Gnomeread', '', 'gnomeread')
 
         try:
-            launcher = Unity.LauncherEntry.get_for_desktop_id ("extras-lightread.desktop")
+            launcher = Unity.LauncherEntry.get_for_desktop_id ("extras-gnomeread.desktop")
 
             ql = Dbusmenu.Menuitem.new ()
             updatenews = Dbusmenu.Menuitem.new ()
@@ -133,10 +133,10 @@ class LightreadWindow(Window):
                     try:
                         if int(title[1]) == 0:
                             launcher.set_property("count_visible", False)
-                            self.set_title("Lightread")
+                            self.set_title("Gnomeread")
                         else:
                             launcher.set_property("count_visible", True)
-                            self.set_title(title[1] + " - Lightread")
+                            self.set_title(title[1] + " - Gnomeread")
 
                         launcher.set_property("count", int(title[1]))
                     except UnboundLocalError:

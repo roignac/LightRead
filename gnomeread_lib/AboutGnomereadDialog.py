@@ -34,20 +34,20 @@
 
 import gettext
 from gettext import gettext as _
-gettext.textdomain('lightread')
+gettext.textdomain('gnomeread')
 
 import logging
-logger = logging.getLogger('lightread')
+logger = logging.getLogger('gnomeread')
 
-from lightread_lib.AboutDialog import AboutDialog
+from gnomeread_lib.AboutDialog import AboutDialog
 
-# See lightread_lib.AboutDialog.py for more details about how this class works.
-class AboutLightreadDialog(AboutDialog):
-    __gtype_name__ = "AboutLightreadDialog"
+# See gnomeread_lib.AboutDialog.py for more details about how this class works.
+class AboutGnomereadDialog(AboutDialog):
+    __gtype_name__ = "AboutGnomereadDialog"
     
     def finish_initializing(self, builder): # pylint: disable=E1002
         """Set up the about dialog"""
-        super(AboutLightreadDialog, self).finish_initializing(builder)
+        super(AboutGnomereadDialog, self).finish_initializing(builder)
 
         # Code for other initialization actions should be added here.
 

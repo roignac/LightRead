@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
-  <!-- interface-requires lightread_window 1.0 -->
+  <!-- interface-requires gnomeread_window 1.0 -->
   <!-- interface-local-resource-path ../media -->
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
@@ -19,13 +19,13 @@
     <property name="can_focus">False</property>
     <property name="stock">gtk-save</property>
   </object>
-  <object class="LightreadWindow" id="lightread_window">
+  <object class="GnomereadWindow" id="gnomeread_window">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Lightread</property>
+    <property name="title" translatable="yes">Gnomeread</property>
     <property name="window_position">center</property>
     <property name="default_width">1200</property>
     <property name="default_height">675</property>
-    <property name="icon">../media/lightread.png</property>
+    <property name="icon">../media/gnomeread.png</property>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>

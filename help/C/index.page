@@ -4,8 +4,8 @@
 
 <info>
   <!-- This shows in the title bar so does not show [icon] -->
-  <title type="text">Lightread</title>
-  <desc>The <app>Lightread</app> help.</desc>
+  <title type="text">Gnomeread</title>
+  <desc>The <app>Gnomeread</app> help.</desc>
   <credit type="author">
     <name>George Czabania</name>
     <email>george@czabania.com</email>
@@ -20,9 +20,9 @@
 <!-- This shows on the page in title font -->
 <!-- the icon only shows when installed -->
 <media type="image" mime="image/png" src="figures/icon.png">[icon]</media>
-<app>Lightread</app> Help
+<app>Gnomeread</app> Help
 </title>
 
-<p>Lightread was written in three weeks so we haven't had enough time to write a help manual. We apologize for any inconvenience this may have caused.</p>
+<p>Gnomeread was written in three weeks so we haven't had enough time to write a help manual. We apologize for any inconvenience this may have caused.</p>
 
 </page>

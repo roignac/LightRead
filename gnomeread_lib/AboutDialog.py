@@ -45,8 +45,8 @@ class AboutDialog(Gtk.AboutDialog):
         
         Returns a fully instantiated AboutDialog object.
         """
-        builder = get_builder('AboutLightreadDialog')
-        new_object = builder.get_object("about_lightread_dialog")
+        builder = get_builder('AboutGnomereadDialog')
+        new_object = builder.get_object("about_gnomeread_dialog")
         new_object.finish_initializing(builder)
         return new_object
 
@@ -55,7 +55,7 @@ class AboutDialog(Gtk.AboutDialog):
 
         finish_initalizing should be called after parsing the ui definition
         and creating a AboutDialog object with it in order
-        to finish initializing the start of the new AboutLightreadDialog
+        to finish initializing the start of the new AboutGnomereadDialog
         instance.
         
         Put your initialization code in here and leave __init__ undefined.

@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 ### BEGIN LICENSE
 # Copyright (C) 2012 Caffeinated Code <caffeinatedco.de>
@@ -33,30 +32,61 @@
 # SUCH DAMAGE.
 ### END LICENSE
 
-import sys
+# THIS IS Gnomeread CONFIGURATION FILE
+# YOU CAN PUT THERE SOME GLOBAL VALUE
+# Do not touch unless you know what you're doing.
+# you're warned :)
+
+__all__ = [
+    'project_path_not_found',
+    'get_data_file',
+    'get_data_path',
+    ]
+
+# Where your project will look for your data (for instance, images and ui
+# files). By default, this is ../data, relative your trunk layout
+__gnomeread_data_directory__ = '/usr/share/gnomeread/'
+__license__ = 'BSD'
+__version__ = '1.0.20'
+
 import os
-import optparse
 
 import gettext
 from gettext import gettext as _
-gettext.textdomain('lightread')
+gettext.textdomain('gnomeread')
 
-from gi.repository import Gtk # pylint: disable=E0611
+class project_path_not_found(Exception):
+    """Raised when we can't find the project directory."""
 
-from lightread_lib import LightreadWindow
-from lightread_lib.helpers import set_up_logging
-from lightread_lib.lightreadconfig import get_version
 
-"""Support for command line options"""
-parser = optparse.OptionParser(version="%%prog %s" % get_version())
-parser.add_option(
-    "-v", "--verbose", action="count", dest="verbose",
-    help=_("Show debug messages (-vv debugs lightread_lib also)"))
-(options, args) = parser.parse_args()
+def get_data_file(*path_segments):
+    """Get the full path to a data file.
 
-set_up_logging(options)
+    Returns the path to a file underneath the data directory (as defined by
+    `get_data_path`). Equivalent to os.path.join(get_data_path(),
+    *path_segments).
+    """
+    return os.path.join(get_data_path(), *path_segments)
 
-# Run the application.    
-window = LightreadWindow.LightreadWindow()
-window.show()
-Gtk.main()
+
+def get_data_path():
+    """Retrieve gnomeread data path
+
+    This path is by default <gnomeread_lib_path>/../data/ in trunk
+    and /usr/share/gnomeread in an installed version but this path
+    is specified at installation time.
+    """
+
+    # Get pathname absolute or relative.
+    path = os.path.join(
+        os.path.dirname(__file__), __gnomeread_data_directory__)
+
+    abs_data_path = os.path.abspath(path)
+    if not os.path.exists(abs_data_path):
+        raise project_path_not_found
+
+    return abs_data_path
+
+
+def get_version():
+    return __version__

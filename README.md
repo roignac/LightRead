@@ -1,6 +1,6 @@
 GnomeRead
 =========
 
-The best RSS reader for Gnome
+The best Google Reader desktop app for Gnome
 
-Forked from LightRead project (https://github.com/stayradiated/lightread)
+Forked from GnomeRead project (https://github.com/stayradiated/gnomeread)

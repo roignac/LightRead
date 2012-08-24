@@ -363,7 +363,7 @@ $(function() {
 				break
 			case 'notify':
 				if (settings.notifications) {
-					document.title = 'notify|Lightread|' + value
+					document.title = 'notify|Gnomeread|' + value
 				}
 				break
 			case 'copy':

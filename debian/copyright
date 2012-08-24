@@ -1,7 +1,7 @@
 Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
-Name: lightread
+Name: gnomeread
 Maintainer: George Czabania <george@czabania.com>
-Source: https://launchpad.net/lightread
+Source: https://launchpad.net/gnomeread
 
 Files: *
 Copyright: (C)); }

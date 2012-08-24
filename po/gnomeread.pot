@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../data/ui/AboutLightreadDialog.ui.h:1
+#: ../data/ui/AboutGnomereadDialog.ui.h:1
 msgid ""
 "# Copyright (C) 2012 Caffeinated Code <caffeinatedco.de>\n"
 "# Copyright (C) 2012 George Czabania\n"
@@ -53,77 +53,77 @@ msgid ""
 "# SUCH DAMAGE.\n"
 msgstr ""
 
-#: ../data/ui/AboutLightreadDialog.ui.h:31
+#: ../data/ui/AboutGnomereadDialog.ui.h:31
 msgid ""
 "Copyright (C) 2012 Caffeinated Code <caffeinatedco.de>\n"
 "Copyright (C) 2012 George Czabania\n"
 "Copyright (C) 2012 Jono Cooper"
 msgstr ""
 
-#: ../data/ui/AboutLightreadDialog.ui.h:34
+#: ../data/ui/AboutGnomereadDialog.ui.h:34
 msgid "caffeinatedco.de"
 msgstr ""
 
-#: ../lightread.py:53
-msgid "Show debug messages (-vv debugs lightread_lib also)"
+#: ../gnomeread.py:53
+msgid "Show debug messages (-vv debugs gnomeread_lib also)"
 msgstr ""
 
-#: ../lightread.desktop.in.h:1 ../data/ui/LightreadWindow.ui.h:1
-msgid "Lightread"
+#: ../gnomeread.desktop.in.h:1 ../data/ui/GnomereadWindow.ui.h:1
+msgid "Gnomeread"
 msgstr ""
 
-#: ../lightread.desktop.in.h:2
-msgid "Lightread application"
+#: ../gnomeread.desktop.in.h:2
+msgid "Gnomeread application"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:2
+#: ../data/ui/GnomereadWindow.ui.h:2
 msgid "_File"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:3
+#: ../data/ui/GnomereadWindow.ui.h:3
 msgid "Add Feed"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:4
+#: ../data/ui/GnomereadWindow.ui.h:4
 msgid "_Edit"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:5
+#: ../data/ui/GnomereadWindow.ui.h:5
 msgid "Add Star"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:6
+#: ../data/ui/GnomereadWindow.ui.h:6
 msgid "Keep Unread"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:7
+#: ../data/ui/GnomereadWindow.ui.h:7
 msgid "_View"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:8
+#: ../data/ui/GnomereadWindow.ui.h:8
 msgid "Next Article"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:9
+#: ../data/ui/GnomereadWindow.ui.h:9
 msgid "Previous Article"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:10
+#: ../data/ui/GnomereadWindow.ui.h:10
 msgid "All Items"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:11
+#: ../data/ui/GnomereadWindow.ui.h:11
 msgid "Unread"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:12
+#: ../data/ui/GnomereadWindow.ui.h:12
 msgid "Starred"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:13
+#: ../data/ui/GnomereadWindow.ui.h:13
 msgid "_Help"
 msgstr ""
 
-#: ../data/ui/LightreadWindow.ui.h:14
+#: ../data/ui/GnomereadWindow.ui.h:14
 msgid "Contents"
 msgstr ""

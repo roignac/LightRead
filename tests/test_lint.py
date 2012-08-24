@@ -52,7 +52,7 @@ class TestPylint(unittest.TestCase):
 #~ 
         #~ you will have to make judgement calls about your code standards
         #~ that differ from the norm'''
-        #~ return_code = subprocess.call(["pylint", 'lightread'])
+        #~ return_code = subprocess.call(["pylint", 'gnomeread'])
 
 if __name__ == '__main__':
     'you will get better results with nosetests'
