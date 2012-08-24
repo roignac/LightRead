@@ -92,6 +92,7 @@ DistUtilsExtra.auto.setup(
     description='A lightweight Google Reader client.',
     url='https://github.com/roignac/gnomeread',
     cmdclass={'install': InstallAndUpdateDataDirectory},
-    data_files=[('share/icons/hicolor/128x128/apps', ['data/media/gnomeread.png'])]
+    data_files=[('share/icons/hicolor/128x128/apps', ['data/media/gnomeread.png']),
+                ('share/gnomeread/media', ['data/media/gnomeread.png'])]
     )
 
