@@ -80,17 +80,17 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 ##################################################################################
 ###################### YOU SHOULD MODIFY ONLY WHAT IS BELOW ######################
+###################### YOU SHOULD MODIFY ONLY WHAT IS BELOW ######################
 ##################################################################################
 
 DistUtilsExtra.auto.setup(
     name='gnomeread',
     version='1.0.20',
     license='BSD',
-    author='George Czabania',
-    author_email='george@czabania.com',
-    description='A lightweight news reader.',
-    #long_description='Here a longer description',
-    url='https://launchpad.net/gnomeread',
+    author='Vadim Rutkovsky',
+    author_email='roignac@gmail.com',
+    description='A lightweight Google Reader client.',
+    url='https://github.com/roignac/gnomeread',
     cmdclass={'install': InstallAndUpdateDataDirectory},
     data_files=[('share/icons/hicolor/128x128/apps', ['data/media/gnomeread.png'])]
     )
